@@ -1,0 +1,46 @@
+<div class="form-group">
+  <label for="username">Username</label>
+  <input type="text" id="username" name="undefined" class="form-control" placeholder="Ex: ..." onchange="montarReq(this,false)" required />
+</div>
+
+<div class="form-group">
+  <label for="password">Password</label>
+  <input type="password" id="password" name="undefined" class="form-control" placeholder="Ex: ..." onchange="montarReq(this,false)" />
+</div>
+
+<div class="form-group">
+  <label for="birthday">Birthday</label>
+  <input type="date" id="birthday" name="undefined" class="form-control" onchange="montarReq(this,false)" />
+</div>
+
+<div class="form-group">
+  <label for="age">Age</label>
+  <input type="number" id="age" name="undefined" class="form-control" min="undefined" max="undefined" placeholder="Ex: ..." onchange="montarReq(this,false)" />
+</div>
+
+<div class="form-group">
+  <label for="profession">País de residência:</label>
+  <select name="undefined" id="profession" class="form-control" onchange="montarReq(this,false)">
+    <option>'</option>
+    <option> a</option>
+    <option> abc</option>
+  </select>
+</div>
+
+<label for="div_gender">Sexo:</label>
+<div class="form-group" id="div_gender">
+  <div class="form-check form-check-inline">
+    <input type="radio" id="masculino" name="undefined" value="masculino" class="form-check-input" onchange="montarReq(this,false)">
+    <label class="form-check-label" for="masculino">Masculino</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input type="radio" id="femino" name="undefined" value="femino" class="form-check-input" onchange="montarReq(this,false)">
+    <label class="form-check-label" for="femino">Femino</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input type="radio" id="outro" name="undefined" value="outro" class="form-check-input" onchange="montarReq(this,false)">
+    <label class="form-check-label" for="outro">Outro</label>
+  </div>
+</div>
