@@ -34,7 +34,7 @@ const template = {
     radio: function(input){ //TODO REVIEW label for
         let html = ''
         html = `
-<label for="div_${input.id}">Sexo:</label>
+<label for="div_${input.id}">${input.label}</label>
 <div class="form-group" id="div_${input.id}">`
 
         html += input.items.map(element => {
@@ -53,7 +53,7 @@ const template = {
     select: function(input){
         let html = `
 <div class="form-group">
-    <label for="${input.id}">País de residência:</label>
+    <label for="${input.id}">${input.label}</label>
     <select name="${input.name}" id="${input.id}" class="form-control" onchange="montarReq(this,false)">\n`
         html += input.items.map(element =>{
             return `<option>${element}</option>`
