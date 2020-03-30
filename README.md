@@ -12,7 +12,7 @@ It's mandatory review the code generated before put in production but this is fa
 
 1. Edit `/intput/form.xlsx` file using you favorite spreadsheet software
 
-   ![image-20200330164838660](C:\Users\Rafael Figueiredo\Desktop\Form\form\docs\excel-example.png)
+   ![image-20200330164838660](./docs/excel-example.png)
 
 2. Run on terminal:
 
@@ -35,3 +35,5 @@ It's mandatory review the code generated before put in production but this is fa
 
 <!-- ...
 ``````
+
+![image-20200330170628978](./docs/form-screenshot.png)
