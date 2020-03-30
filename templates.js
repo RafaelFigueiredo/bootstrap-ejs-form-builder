@@ -27,7 +27,7 @@ const template = {
 <div class="form-group">
     <label for="${input.id}">${input.label}</label>
     <input type="${input.type}" id="${input.id}" name="${input.name}" class="form-control"
-    onchange="montarReq(this,false)" />
+    onchange="montarReq(this,false)" ${input.required === 'yes'? 'required':''}/>
 </div>`}
     ,
 
@@ -41,7 +41,7 @@ const template = {
             let radio_id = element.toLowerCase().replace(" ", "_")
             return`
 <div class="form-check form-check-inline">
-    <input type="radio" id="${radio_id}" name="${input.name}" value="${radio_id}" class="form-check-input" onchange="montarReq(this,false)">
+    <input type="radio" id="${radio_id}" name="${input.name}" value="${radio_id}" class="form-check-input" onchange="montarReq(this,false)" ${input.required === 'yes'? 'required':''}>
     <label class="form-check-label" for="${radio_id}">${element}</label>
 </div>`
         }).join('\n');
@@ -54,7 +54,7 @@ const template = {
         let html = `
 <div class="form-group">
     <label for="${input.id}">${input.label}</label>
-    <select name="${input.name}" id="${input.id}" class="form-control" onchange="montarReq(this,false)">\n`
+    <select name="${input.name}" id="${input.id}" class="form-control" onchange="montarReq(this,false)" ${input.required === 'yes'? 'required':''}>\n`
         html += input.items.map(element =>{
             return `<option>${element}</option>`
         }).join('\n')
