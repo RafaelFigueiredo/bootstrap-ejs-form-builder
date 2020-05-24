@@ -17,8 +17,16 @@ It's mandatory review the code generated before put in production but this is fa
 2. Run on terminal:
 
    ``````bash
-   node form.js ./input/form.xlsx ./output/form.ejs
+   node form.js <input_file> <output_path>
    ``````
+
+   The default input file is `./input/forms.xlsx` and the default output path, where generated html forms will be stored, is `./output/`
+
+   The name for each file generated will be the sheet name of input file.
+
+   ![image-20200524101331105](./docs/image-20200524101140198.png)
+
+   
 
 3. Review the generated file on `/output/form.ejs`
 
