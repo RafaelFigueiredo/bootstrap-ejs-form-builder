@@ -15,6 +15,14 @@ const template = {
 </div>`    
     },
 
+    email: function(input){ return `
+<div class="form-group">
+    <label for="${input.id}">${input.label}</label>
+    <input type="${input.type}" id="${input.id}" name="${input.name}" class="form-control"
+    placeholder="${input.placeholder}" onchange="montarReq(this,false)" ${input.required === 'yes'? 'required':''} />
+</div>`    
+    },
+
     number: function(input){ return `
 <div class="form-group">
     <label for="${input.id}">${input.label}</label>

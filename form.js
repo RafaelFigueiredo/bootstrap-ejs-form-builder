@@ -19,8 +19,13 @@ console.log('------------------------------------------------\n')
 
 
 let workbook = xlsxParser.readFile(input_file)
+
 workbook.SheetNames.forEach(sheet_name =>{
     console.log(`[${sheet_name}]`)
+    generate_forms(workbook, sheet_name)
+})    
+
+async function generate_forms(workbook, sheet_name){
     let input = xlsxParser.utils.sheet_to_json(workbook.Sheets[sheet_name])
     
     // If items list is defined, in case of 'radio' or 'select' fields, we split
@@ -48,5 +53,4 @@ workbook.SheetNames.forEach(sheet_name =>{
       if (err) return console.log(err);
       console.log('Form html >> ', output_file);
     });
-
-})    
+}
